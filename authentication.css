@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 246, 121);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: 30vh;
+    width: 30vh;
+}
