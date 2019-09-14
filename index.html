@@ -1,4 +1,32 @@
 <html>
+
 <head>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCuTGks4VfB8OE1YVMQyq8l-GiWGK4sAF0",
+            authDomain: "thugofwar-yo.firebaseapp.com",
+            databaseURL: "https://thugofwar-yo.firebaseio.com",
+            projectId: "thugofwar-yo",
+            storageBucket: "thugofwar-yo.appspot.com",
+            messagingSenderId: "826218534653",
+            appId: "1:826218534653:web:ad6228cd64b5b02ac99094"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
+
+<body>
+    <h1>Logged in!</h1>
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            console.log(user);
+            var img = document.createElement('img');
+            img.src = user.photoURL;
+            document.body.appendChild(img);
+        });
+    </script>
+</body>
+
 </html>
