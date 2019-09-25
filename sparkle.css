@@ -1,0 +1,131 @@
+
+  .sparkle {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-width: 10px;
+    border-color: orange;
+    border-style: solid ;
+    opacity: 0.1;
+    transition: all 1s;
+    position: absolute;
+  }
+  
+  .bigger {
+    position: absolute;
+    opacity: 1;
+    height: 200px;
+    width: 200px;
+    border-color: red;
+    border-width: 3px;
+  }
+.coil-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+}  
+.coil {
+    position: absolute;
+    width: 5px;
+    height: 0px;
+    border-radius: 20%;
+    top: calc(50% - 150px);
+    left: calc(50% - 3.5px);
+    transform-origin: 5px 150px;
+    background-color: black;
+    animation: identifier 1s linear;
+}
+
+  @keyframes identifier {
+    0% { height: 30px; }
+    50% { height: 0px; }
+    50% { height: 20px; }
+    100% { height: 0; }
+  }
+
+.coil-1 {
+    transform: rotate(0deg);
+  }
+  .coil-2 {
+    transform: rotate(45deg);
+  }
+  .coil-3 {
+    transform: rotate(90deg);
+  }
+  .coil-4 {
+    transform: rotate(135deg);
+  }
+  .coil-5 {
+    transform: rotate(180deg);
+  }
+  .coil-6 {
+    transform: rotate(225deg);
+  }
+  .coil-7 {
+    transform: rotate(270deg);
+  }
+  .coil-8 {
+    transform: rotate(315deg);
+  }
+  #item {
+    transition: all 1s; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* endees quiz iin heseg ehelj bga shuuu */
+body {
+    display: flex;
+    margin: 0;
+}
+#hint_heseg {       
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#buhel_body {
+    min-height: 450px;
+    background-color: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aav {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    position: fixed;
+}
+#question {
+    background-color: white;
+    font-size: 30px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.smalld {
+    opacity: 0.1;
+    height: 50px;
+    width: 50px;
+    transition: all 1s;
+}
+
+.bigd {
+    opacity: 1;
+    height: 100px;
+    width: 100px;
+}
