@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": ".",
+    "public": "Enigma-box",
     "ignore": [
       "firebase.json",
       "**/.*",
