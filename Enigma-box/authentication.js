@@ -1,29 +1,33 @@
 var provider = new firebase.auth.FacebookAuthProvider();
 const db = firebase.firestore();
-var userInfo;
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        window.location = '/profile.html';
-        console.log(user);
-        var uidDock = db.collection("Users").doc(user.uid);
-        if (uidDock.exists) {
-            
-        } else {
-        db.collection("Users").doc(user.uid).set({
-            name: user.displayName
+        
+        var uidDoc = db.collection("Users").doc(user.uid);
+        uidDoc.get().then(function(doc) {
+            if (doc.exists) {
+                console.log('User exist!!');
+            } else {
+                db.collection("Users").doc(user.uid).set({
+                    name: user.displayName,
+                    items: null,
+                    score: 0
+                })
+                    .then(function () {
+                        
+                        console.log("User Created!!!");
+                    })
+                    .catch(function (error) {
+                        console.log("Error writing user: ", error);
+                    }).finally(function(){
+                        window.location = "/profile.html";
+                    });
+            }
+        }).catch(function(error) {
+            console.log("Error getting user:", error);
         })
-        .then(function() {
-            console.log("Document successfully written!");
-        })
-        .catch(function(error) {
-            console.log("Error writing document: ", error);
-        });
-        }
     }
-    globalEmail = user.emails;
-    //  var id = firebase.auth().onAuthStateChanged(globalEmail);
-    // console.log(id);
 });
 /* fb acc aas avaad yums oruulaad sanuulah */
 //db ni database doroh zuil
