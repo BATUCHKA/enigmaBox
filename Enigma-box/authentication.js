@@ -1,31 +1,47 @@
 var provider = new firebase.auth.FacebookAuthProvider();
+const db = firebase.firestore();
+var userInfo;
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        window.location = '/index.html';
+        window.location = '/profile.html';
+        console.log(user);
+        var uidDock = db.collection("Users").doc(user.uid);
+        if (uidDock.exists) {
+            
+        } else {
+        db.collection("Users").doc(user.uid).set({
+            name: user.displayName
+        })
+        .then(function() {
+            console.log("Document successfully written!");
+        })
+        .catch(function(error) {
+            console.log("Error writing document: ", error);
+        });
+        }
     }
+    globalEmail = user.emails;
+    //  var id = firebase.auth().onAuthStateChanged(globalEmail);
+    // console.log(id);
 });
-provider.setCustomParameters({
-    'display': 'popup'
-  });
-
-
-const db = firebase.firestore();//db ni database doroh zuil
+/* fb acc aas avaad yums oruulaad sanuulah */
+//db ni database doroh zuil
 
 //tsaanaasaa coll dotor doc usgeed dotor yum ogoh
-db.collection('users').add({
-    'userId': 'asdf',
-    'items' : ['KK']
-}).then(doc => {
-    console.log(doc.id)
-});
+// db.collection('users').add({
+//     'userId': 'asdf',
+//     'items': ['KK']
+// }).then(doc => {
+//     console.log(doc.id)
+// });
 
 // add OR update
-// db.collection('users').doc('userId').set({
+// db.collection('name').doc('userId').set({
 //     'userId': 'user001',
 //     'userName': 'userName001',
 //     'items': ['watch', 'phone', 'hat', 't-shirt']
-// })
+// });
 
 // get one doc
 // db.collection('users').doc('userKK').get().then((docs) => {
@@ -40,16 +56,14 @@ db.collection('users').add({
 // });
 
 function faceLogin() {
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+    firebase.auth().signInWithPopup(provider).then(function (result) {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        
         console.log(user);
-
         // ...
-      }).catch(function(error) {
+    }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -58,5 +72,9 @@ function faceLogin() {
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-      });
+    });
 }
+
+// var sout = firebase.auth().signOut().then(function() {
+// }).catch(function(error) {
+// });
