@@ -45,6 +45,7 @@ function renderQuestion(question) {
     lvl++;
 
     let answerEl = document.createElement('h4');
+    answerEl.classList.add("goy");  
     answerEl.id = 'asuult'; 
     answerEl.innerHTML = question.question;
     questionEl.appendChild(answerEl);
@@ -55,6 +56,7 @@ function renderQuestion(question) {
         optionEl.innerHTML = question.answers[i].value;
         optionEl.id = i;
         optionEl.onclick = choose;
+        optionEl.classList.add("goy");
         questionEl.appendChild(optionEl);
     }
 }
