@@ -5,4 +5,4 @@ setTimeout(function() {
 
 setTimeout(function() {
     document.getElementsByClassName("smallD")[0].classList.add('bigd');
-}, 200);
+}, 730);

@@ -11,6 +11,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+let life = 2;
+document.getElementById('too').innerHTML = 'X' + life;
+
 let lvl = 1;
 let db = firebase.firestore();
 var refCollection = db.collection("Question");
@@ -74,5 +77,9 @@ function choose() {
         }
     } else {
         console.log('buruu')
+        life--;
+        console.log(life)
+        document.getElementById('too').innerHTML = 'X' + life;
+        
     }
 }

@@ -15,7 +15,8 @@ body {
 
 .buhel_body {
     min-height: 450px;
-    background-color: #ffcc00;
+    background-color: #ffcc00;\
+
     
 }
 #aav {
@@ -36,38 +37,46 @@ body {
     margin-top: 5px;
     flex: 1;
 }   
-.topX {
-    display: flex;
-    justify-content: flex-end;
-    height: 10vh;
-}
-
-.bottomX {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    margin-top: 40px;
-}
+ 
 .ami {
-    font-size: 20px;
-    color: white;
     display: flex;
     flex-direction: row;
+    display: flex;
+    margin-top: 20px;
+    margin-right: 10px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .ami img {
+    margin-right: 45px;
     height: 37px;
     width: 37px;
+}
+#too {  
+    position: absolute;
+    font-size: 35px;
+    color: white;
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
 }
 .goy {
 
     border: solid 5px #ffcc00;
     padding: 10px;
     margin: 12px;
-
 }
-
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.box img {
+    height: 200px;
+    width: 240px;
+}
 /* .option {
     height: 47px;
     width: 132px;
@@ -76,10 +85,10 @@ body {
     padding: 8px;
 } */
 
-/* #box {
+ /* .box {
     width: 150px;
     height: 150px;
     position: absolute;
     background-color: darkgoldenrod;
 
-} */
+}  */
