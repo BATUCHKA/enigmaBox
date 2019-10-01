@@ -1,12 +1,13 @@
 var provider = new firebase.auth.FacebookAuthProvider();
 const db = firebase.firestore();
+var userId = "as";
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-
+        userId = user.uid;
         var uidDoc = db.collection("Users").doc(user.uid);
         uidDoc.get().then(function (doc) {
-            if (doc.exists) {
+            if(doc.exists) {
                 console.log('User exist!!');
                 /*
                     get item list;
@@ -15,7 +16,6 @@ firebase.auth().onAuthStateChanged(function (user) {
                     push this item
                 */
             } else {
-
                 db.collection("Users").doc(user.uid).set({
                     name: user.displayName,
                     items: [],
@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                     .catch(function (error) {
                         console.log("Error writing user: ", error);
                     }).finally(function () {
-                        window.location = "/profile.html";
+                        window.location = "/genderPick.html";
                     });
             }
         }).catch(function (error) {
