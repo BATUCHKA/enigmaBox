@@ -1,10 +1,14 @@
 console.log(userId)
 
 var femaleRef = () => {
-    console.log(userId)
+    db.collection("Users").doc(user.uid).set({
+        "gender" : "female"
+    })
 }
 var maleRef = () => {
-
+    db.collection("Users").doc(user.uid).set({
+        "gender" : "male"
+    })
 }
 // function neriinugno(name) {
 
