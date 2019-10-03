@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         var uidDoc = db.collection("Users").doc(user.uid);
         uidDoc.get().then(function (doc) {
             if(doc.exists) {
-                console.log('User exist!!');
+                window.location = "/enigmaBox/public/profile.html";
                 /*
                     get item list;
                     get level
@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                     .catch(function (error) {
                         console.log("Error writing user: ", error);
                     }).finally(function () {
-                        window.location = "/genderPick.html";
+                        window.location = "/enigmaBox/public/genderPick.html";
                     });
             }
         }).catch(function (error) {
