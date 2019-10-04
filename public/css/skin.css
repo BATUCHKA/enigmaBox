@@ -1,0 +1,46 @@
+
+body{
+   
+    background-color: lightyellow; 
+}
+.level1{
+    margin-left: 10%;
+   margin-top: 10%;
+
+}
+.level2{
+    margin-left: 10%;
+    margin-top: 45%;
+ 
+ }
+ .level3{
+    margin-left: 10%;
+    margin-top: 50%;
+ 
+ }
+
+ .ug{
+     margin-left:10%;
+ }
+ .diamondb{
+    width: 20vw;
+    height: 20vh;
+    margin-left: 40%;
+    margin-top: 10%;
+ 
+    
+ }
+ .goldenb{
+    width: 20vw;
+    height: 20vh;
+    margin-left: 40%;
+    margin-top: 10%;
+ 
+ }
+ .silverb{
+    width: 20vw;
+    height: 20vh;
+    margin-left: 40%;
+    margin-top: 10%;
+ 
+ }
