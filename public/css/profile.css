@@ -25,7 +25,7 @@ body{
     justify-content: flex-start;
 }
 
-.play{
+.play {
     height:100px;
     width:100px;
     border-radius: 15%;
@@ -38,7 +38,6 @@ body{
 	flex-direction: row;
 	flex-wrap: nowrap;
     justify-content: center;
-  
 }
 
 .playSkin {
@@ -77,7 +76,7 @@ body{
     font-size: 30px;
     color:gray; 
 }
- .tsamts-heseg{
+ .man-costume{
 
     position: absolute;
     top: 4px;
@@ -85,19 +84,20 @@ body{
   
     /* visibility: hidden; */
  }
- .nudniishil-heseg{
+ .man-glasses{
     position: absolute;
     top: 4px;
     left: 0px;
     /* visibility: hidden; */
  }
- .tsag-heseg{
+
+ .man-watch{
     position: absolute;
     top: 4px;
     left: -5px;
     /* visibility: hidden;  */
  }
- .umd-heseg{
+ .man-pants{
     top: 4px;
     left: 0px;
     position: absolute;
@@ -107,7 +107,7 @@ body{
   
 
  }
- .malgai-heseg{
+ .man-hat{
     position: absolute;
     top:-6px;
     left: -2px;
@@ -116,7 +116,7 @@ body{
     
 
  }
- .gutal-heseg{
+ .man-shoes{
     position: absolute;
     top: 4px;
     left: -5px;

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="giewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Profile</title>
 	<link rel="stylesheet" href="./css/profile.css">
@@ -33,12 +33,6 @@
 
 		<div class="erhun">
 			<img src="./src/erhun.png" alt="hun">
-			<div class="tsamts-heseg"><img src="./src/bijak.png" alt=""></div>
-			<div class="nudniishil-heseg" ><img src="./src/shil er.png" alt=""></div>
-			<div class="tsag-heseg" ><img src="./src/tsag (1).png" alt=""></div>
-			<div class=" umd-heseg" ><img src="./" alt=""></div>
-			<div class="malgai-heseg" ><img src="./src/malgai.png	" alt=""></div>
-			<div class="gutal-heseg" ><img src="./src/gutal.png" alt=""></div>
 		</div>
 
 		<table class="playSkin">
@@ -48,7 +42,15 @@
 							src="./src/profilebox.png" alt="dude"></button></td>
 			</tr>
 		</table>
-
+		<script>
+			var x = document.createElement('div')
+			x.classList.add('tsamts-heseg');
+			var img = document.createElement('img')
+			img.src = './src/bijak.png'
+			x.appendChild(img)
+			console.log(x)
+			document.getElementsByClassName("erhun")[0].appendChild(x)
+		</script>
 
 
 	</div>
