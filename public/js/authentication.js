@@ -29,7 +29,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                     .catch(function (error) {
                         console.log("Error writing user: ", error);
                     }).finally(function () {
-                        window.location = "/enigmaBox/public/genderPick.html";
+                        window.location = "/genderPick.html";
                     });
             }
         }).catch(function (error) {
