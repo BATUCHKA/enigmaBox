@@ -18,28 +18,37 @@ body {
 }
 
 #female {
-    background-color: aquamarine;
+    background-color: #ffcc00;
     height: 180px;
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
 }
 #female:active {
-    background-color: rgb(0, 255, 170);
+    background-color: #ff9900;
     height: 200px;
     width: 200px;
     box-shadow: 0px 1px 5px;
 }
 #male {
-    background-color: aquamarine;
+    background-color: #ffcc00;
     height: 180px;
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
 }
 #male:active {
-    background-color: rgb(0, 255, 170);
+    background-color: #ff9900;
     height: 200px;
     width: 200px;
     box-shadow: 0px 1px 5px;
+}
+.top {
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
