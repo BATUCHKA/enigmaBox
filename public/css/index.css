@@ -48,7 +48,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
-  background-image: url("nice.jpeg");
+  background-image: url("../src/nice.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -110,7 +110,7 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   height: 25%;
-  background-image: url("oki.jpg");
+  background-image: url("../src/oki.jpg");
 }
 .pic2 {
   display: flex;
@@ -124,5 +124,5 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   height: 25%;
-  background-image: url("maxresdefault.jpg");
+  background-image: url("../src/maxresdefault.jpg");
 }

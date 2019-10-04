@@ -4,11 +4,12 @@ var userId = "as";
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+        console.log(user);
         userId = user.uid;
         var uidDoc = db.collection("Users").doc(user.uid);
         uidDoc.get().then(function (doc) {
             if(doc.exists) {
-                window.location = "/enigmaBox/public/profile.html";
+                window.location = "/profile.html";
                 /*
                     get item list;
                     get level

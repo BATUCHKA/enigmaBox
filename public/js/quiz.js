@@ -11,6 +11,14 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+var userId;
+// user auth
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        userId = user.uid;
+    }
+});
+
 let life = 2;
 document.getElementById('too').innerHTML = 'X' + life;
 
@@ -83,6 +91,5 @@ function choose() {
         life--;
         console.log(life)
         document.getElementById('too').innerHTML = 'X' + life;
-        
     }
 }
