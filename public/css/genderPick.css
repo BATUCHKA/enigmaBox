@@ -55,3 +55,7 @@ body {
 img {
     height: 150px;
 }
+#text {
+    font-family: "Exo 2" "ExtraBold";
+    height: 60;
+}
