@@ -1,6 +1,6 @@
 var provider = new firebase.auth.FacebookAuthProvider();
 const db = firebase.firestore();
-var userId = "as";
+var userId;
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -35,6 +35,9 @@ firebase.auth().onAuthStateChanged(function (user) {
         }).catch(function (error) {
             console.log("Error getting user:", error);
         })
+    } else {
+        console.log("TEST");
+        document.getElementById('fb').addEventListener("click", faceLogin);
     }
 });
 /* fb acc aas avaad yums oruulaad sanuulah */
