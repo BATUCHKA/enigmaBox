@@ -7,48 +7,38 @@ body {
 .box {
     height: 200px;
     width: 500px;
-    background-color: rgb(232, 232, 232);
-    border: solid 10px rgb(57, 51, 51);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 100px;
-    box-shadow: 0px 1px 5px;
 }
 
 #female {
-    background-color: #ffcc00;
+    border-color: #ffcc00;
     height: 180px;
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
 }
 #female:active {
-    background-color: #ff9900;
+    border-color: #ff9900;
     height: 200px;
     width: 200px;
     box-shadow: 0px 1px 5px;
 }
 #male {
-    background-color: #ffcc00;
+    border-color: #ffcc00;
     height: 180px;
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
 }
 #male:active {
-    background-color: #ff9900;
+    border-color: #ff9900;
     height: 200px;
     width: 200px;
     box-shadow: 0px 1px 5px;
 }
-.top {
-    height: 50px;
-    background-color: black;
-    color: white;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+img {
+    height: 180px;
 }
