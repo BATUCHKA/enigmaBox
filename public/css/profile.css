@@ -3,30 +3,29 @@
     outline: none;
 }
 body{
-
-    background-color: rgb(17, 29, 36);
-    
-    margin: 0px;
-    
+    background-color: yellow;
+   margin: 0px;
     width: 100vw;
-
-    height: 100vh;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-  
+    height: 100vh;  
 }
 
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
 
+.topBar {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+}
 
 .play{
-    
     height:100px;
     width:100px;
     border-radius: 15%;
@@ -39,28 +38,19 @@ body{
 	flex-direction: row;
 	flex-wrap: nowrap;
     justify-content: center;
-    
   
 }
 
-
 .playSkin {
-    position: absolute;
-    width: 100%;
-    margin: 20px;
-    bottom: 10px;   
-
-
-
+    width: 70%;
+    margin: 10px;
 } 
-.alnright{
-   
-    width: 1px;
-   
+
+.alnright {
+    width: 1px;   
 }
 
 .skin{
-  
     height:100px;
     width:100px;
     border-radius: 15%; 
@@ -68,26 +58,76 @@ body{
     padding: 13px;
     color: white;
     border: none;
-
     margin: 10px;
+    display: flex;
     justify-content: center;
-  
 }
-.play:active{ 
-  
+
+.play:active{   
     background-color: white;
 }
+
 .skin:active{
     background-color:white;
-
 }
-
 
 .score{
+    margin-top: 3%;
+    margin-left: 3%;
     font-size: 30px;
-    position: absolute;
     color:gray; 
-    top: 20px;
-    left: 20px;  
-    margin: 10px;
 }
+ .tsamts-heseg{
+
+    position: absolute;
+    top: 4px;
+    left: -5px;
+  
+    /* visibility: hidden; */
+ }
+ .nudniishil-heseg{
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    /* visibility: hidden; */
+ }
+ .tsag-heseg{
+    position: absolute;
+    top: 4px;
+    left: -5px;
+    /* visibility: hidden;  */
+ }
+ .umd-heseg{
+    top: 4px;
+    left: 0px;
+    position: absolute;
+    top: 50%;
+    /* visibility: hidden; */
+    left:40.9%;
+  
+
+ }
+ .malgai-heseg{
+    position: absolute;
+    top:-6px;
+    left: -2px;
+
+    /* visibility: hidden; */
+    
+
+ }
+ .gutal-heseg{
+    position: absolute;
+    top: 4px;
+    left: -5px;
+
+
+    /* visibility: hidden;  */
+  
+
+ }
+
+ .erhun {
+    
+    position: relative;
+ }
