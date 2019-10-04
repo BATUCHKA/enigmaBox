@@ -20,18 +20,18 @@ body {
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 #female:active {
     border: 1px #ff9900;
     height: 200px;
     width: 200px;
     box-shadow: 0px 1px 5px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 #male {
     border: 1px #ffcc22;
@@ -39,21 +39,21 @@ body {
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 #male:active {
     border: 1px #ff9900;
     height: 200px;
     width: 200px;
     box-shadow: 0px 1px 5px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 img {
-    height: 150px;
+    height: 130px;
 }
 #text {
     font-family: "Exo 2" "ExtraBold";
