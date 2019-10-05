@@ -36,6 +36,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function faceLogin() {
+    console.log('asdasdasd')
     firebase.auth().signInWithPopup(provider).then(function (result) {
         var token = result.credential.accessToken;
         var user = result.user;

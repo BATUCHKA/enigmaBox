@@ -61,7 +61,6 @@ body {
     align-items: center;    
 }
 .goy {
-
     border: solid 5px #ffcc00;
     padding: 10px;
     margin: 12px;
@@ -73,7 +72,7 @@ body {
 }
 .box img {
     height: 200px;
-    width: 240px;
+    width: 180px;
 }
 /* .option {
     height: 47px;
