@@ -34,16 +34,17 @@ img {
     top: 25%;
 }
 #name {
-    font-family: "Exo 2" "ExtraBold";
-    font-size: 100px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 140px;
 }
 button {
     position: absolute;
     top: 70%;
     background-color: #FFDD0E;
-    width: 700px;
-    height: 150px;
-    font-size: 60px;
+    width: 400px;
+    height: 170px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 80px;
     color: aliceblue;
     border-radius: 10px;
 }
