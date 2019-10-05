@@ -37,8 +37,9 @@ body {
   background-position: top left;
 }
 .playButton {
-  font-size: 20px;
-  font-family: minecraftia;
+  font-size: 30px;
+  font-family: 'Exo 2', sans-serif;
+
   color: aliceblue;
 }
 
@@ -49,7 +50,8 @@ body {
   width: 35vw;
   height: 9vh;
   font-size: 20px;
-  font-family: minecraftia;
+  font-family: 'Exo 2', sans-serif;
+
   color: aliceblue;
   border-radius: 10px;
   display: flex;
@@ -58,7 +60,7 @@ body {
 }
 
 .ug-container {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Exo 2', sans-serif;
   font-size: 40px;
   color: aliceblue;
   display: flex;
@@ -71,19 +73,20 @@ body {
 .para1 {
 
   color: aliceblue;
-  font-family: minecraftia;
-  font-size: 20px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 25px;
 }
 .para2 {
   margin-top: 4%;
   color: aliceblue;
-  font-family: minecraftia;
-  font-size: 20px;
+  font-family: 'Exo 2', sans-serif;
+
+  font-size: 25px;
 }
 .garchig {
   padding: 5px;
-  font-family: minecraftia;
-  font-size: 30px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 35px;
   color: white;
   text-align: center;
 }
