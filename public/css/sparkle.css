@@ -9,6 +9,8 @@
     opacity: 0.1;
     transition: all 1s;
     position: absolute;
+    font-family: 'Exo 2', sans-serif;
+
   }
   
   .bigger {
@@ -88,6 +90,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Exo 2', sans-serif;
 
 }
 #buhel_body {
@@ -115,10 +118,12 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
+    font-family: 'Exo 2', sans-serif;
+
 }
 
 .smalld {
-    opacity: 0.1;
+    opacity: 0;
     height: 50px;
     width: 50px;
     transition: all 1s;
