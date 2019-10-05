@@ -1,16 +1,31 @@
 console.log(userId)
+var userId;
+const db = firebase.firestore();
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        console.log(user);
+        userId = user.uid;
+    } else {
+        window.location = "/authentication.html";
+    }
+});
 
 var femaleRef = () => {
-    db.collection("Users").doc(user.uid).update({
+    db.collection("Users").doc(userId).update({
         "gender" : "female"
     })
-    window.location = "/enigmaBox/public/profile.html";
+    .then(function(){
+        window.location = "/profile.html";
+    });
 }
 var maleRef = () => {
-    db.collection("Users").doc(user.uid).update({
+    db.collection("Users").doc(userId).update({
         "gender" : "male"
     })
-    window.location = "/enigmaBox/public/profile.html";
+    .then(function(){
+        window.location = "/profile.html";
+    });
 }
 // function neriinugno(name) {
 

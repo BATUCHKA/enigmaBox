@@ -1,9 +1,10 @@
 * {
     outline: none;
 }
+
 body{
     background-color: yellow;
-   margin: 0px;
+    margin: 0px;
     width: 100vw;
     height: 100vh;  
 }
@@ -76,27 +77,30 @@ body{
     font-size: 30px;
     color:gray; 
 }
- .man-costume{
+
+.man-costume{
 
     position: absolute;
     top: 4px;
     left: -5px;
   
     /* visibility: hidden; */
- }
- .man-glasses{
+}
+
+.man-glasses{
     position: absolute;
     top: 4px;
     left: 0px;
     /* visibility: hidden; */
- }
- .man-watch{
+}
+
+.man-watch{
     position: absolute;
     top: 4px;
     left: -5px;
-    /* visibility: hidden;  */
- }
- .man-pant{
+}
+
+.man-pant{
     top: 4px;
     left: 0px;
     position: absolute;
@@ -105,8 +109,8 @@ body{
     left:40.9%;
   
 
- }
- .man-hat{
+}
+.man-hat{
     position: absolute;
     top:-6px;
     left: -2px;
@@ -114,19 +118,13 @@ body{
     visibility: hidden;
     
 
- }
- .man-shoes{
+}
+.man-shoes{
     position: absolute;
     top: 4px;
     left: -5px;
+}
 
-
-    /* visibility: hidden;  */
-  
-
- }
-
- .erhun {
-    
+.erhun {
     position: relative;
- }
+}

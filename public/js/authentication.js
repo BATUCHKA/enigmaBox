@@ -1,14 +1,15 @@
 var provider = new firebase.auth.FacebookAuthProvider();
 const db = firebase.firestore();
-var userId = "as";
+var userId;
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+        console.log(user);
         userId = user.uid;
         var uidDoc = db.collection("Users").doc(user.uid);
         uidDoc.get().then(function (doc) {
             if(doc.exists) {
-                window.location = "/enigmaBox/public/profile.html";
+                window.location = "/profile.html";
                 /*
                     get item list;
                     get level
@@ -28,12 +29,15 @@ firebase.auth().onAuthStateChanged(function (user) {
                     .catch(function (error) {
                         console.log("Error writing user: ", error);
                     }).finally(function () {
-                        window.location = "/enigmaBox/public/genderPick.html";
+                        window.location = "/genderPick.html";
                     });
             }
         }).catch(function (error) {
             console.log("Error getting user:", error);
         })
+    } else {
+        console.log("TEST");
+        document.getElementById('fb').addEventListener("click", faceLogin);
     }
 });
 /* fb acc aas avaad yums oruulaad sanuulah */

@@ -1,3 +1,3 @@
 var play = () => {
-    window.location("/enigmaBox/public/authentication.html");
+    window.location = "authentication.html";
 }

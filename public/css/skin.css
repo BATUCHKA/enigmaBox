@@ -3,12 +3,20 @@ body{
    
     background-color: lightyellow; 
 }
-.level{
+.level1{
     margin-left: 10%;
     margin-top: 10%;
     display: flex;
 }
-
+.level2{
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+}.level3{
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+}
 .ug{
     margin-left:10%;
 }
