@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
     margin: 0;
     width: 100%;
@@ -22,19 +21,6 @@ body {
 * {
     outline: none;
 }
-=======
-* {
-    outline: none;
-}
-
-body{
-    background-color: yellow;
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;  
-}
-
->>>>>>> 64ed46d18085955c6557b83cc985003ac0833f8b
 .container {
     height: 100vh;
     width: 100vw;
