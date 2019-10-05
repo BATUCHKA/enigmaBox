@@ -1,44 +1,30 @@
 
 body{
-   
+    
     background-color: lightyellow; 
 }
-.level1{
-    margin-left: 10%;
-    margin-top: 10%;
-    display: flex;
-}
-.level2{
-    margin-left: 10%;
-    margin-top: 10%;
-    display: flex;
-}.level3{
-    margin-left: 10%;
-    margin-top: 10%;
-    display: flex;
-}
-.ug{
-    margin-left:10%;
-}
 
-.diamondb{
-width: 1vw;
-height: 1vh;
-margin-left: 10vh;
-margin-top: 10%;
-
-
-}
-.goldenb{
-    width: 1vw;
-    height: 1vh;
-    margin-left: 40%;
+.tetx1{
     margin-top: 10%;
+   flex-direction: column;
+    display: flex;
+    
 }
 .silverb{
-width: 1vw; 
-height: 1vh;
-margin-left: 40%;
-margin-top: 10%;
-
+    margin-top: 10%;
+    margin-left: 20%;
 }
+.level2{
+    width: 100%;
+    height: 100%;    
+    margin-left: 10%;
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+}.level3{
+    margin-left: 10%;
+    margin-top: 30%;
+    display: flex;
+    align-items: center;
+}
+
