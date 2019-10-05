@@ -1,9 +1,25 @@
 body {
-    background-color: #ffcc00;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+    background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
 }
 .box {
     height: 200px;
@@ -57,5 +73,6 @@ img {
 }
 #text {
     font-family: "Exo 2" "ExtraBold";
-    height: 60;
+    font-size: 40px;
+    color: white;
 }
