@@ -1,19 +1,7 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyBYXtJKzhgHDJfYfS3WB3LUiCR2baBBuT0",
-    authDomain: "enigma-box.firebaseapp.com",
-    databaseURL: "https://enigma-box.firebaseio.com",
-    projectId: "enigma-box",
-    storageBucket: "enigma-box.appspot.com",
-    messagingSenderId: "1009957713350",
-    appId: "1:1009957713350:web:4a02ab0a2de9d04dfbaec7"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 var userId;
 // user auth
 firebase.auth().onAuthStateChanged(function (user) {
+    console.log(user)
     if (user) {
         userId = user.uid;
     }
@@ -39,11 +27,17 @@ console.log(rd);
 let questionIndex = 0;
 
 let questions = [];
+let item = "";
 
-refCollection.where('random', '==', rd).limit(20).get()
+let itemUrl = '';
+
+refCollection.where('random', '==', rd).limit(1).get()
     .then(snapshot => {
         snapshot.forEach(doc => {
+            item = doc.id;
+            itemUrl = doc.data().url;
             questions = doc.data().questions;
+            itemUrl = doc.data().url;
             console.log(questions)
             renderQuestion(questions[questionIndex])
         });
@@ -75,16 +69,37 @@ function renderQuestion(question) {
     }
 }
 
+function pushItem() {
+    const itemCollection = db.collection("Users");
+    itemCollection.doc(userId).update({
+        [`items.${item}`] : itemUrl
+    }).then( k => {
+        console.log('amjiltttai nemlee');
+
+    }).catch(err =>{
+        console.log('from push item', err)
+    })
+}
+
 function choose() {
     let answerId = this.id;
-    if (questions[questionIndex].answer[answerId].right === true) {
+    if (questionIndex < questions.length && questions[questionIndex].answer[answerId].right === true) {
         console.log('zov')
         questionIndex++;
         if (questionIndex != questions.length)  {
-            renderQuestion(question[questionIndex]);
+            renderQuestion(question[questionIndex - 1]);
         } else {
-            console.log('question duuslaa')
-            document.location.href = 'sparkle.html'
+            console.log('question duuslaa');
+            console.log('userId:', userId)
+            firebase.firestore().collection(`Users/${userId}/items`).add({
+                url: itemUrl
+            }).then(() => {
+                // document.location.href = 'sparkle.html';
+                console.log('DONE')
+            }).catch(e => {
+                console.log(e);
+            })
+            // pushItem();
         }
     } else { 
         console.log('buruu')

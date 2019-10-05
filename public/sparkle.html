@@ -1,43 +1,58 @@
- <html lang="en">
-    
+<html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/sparkle.css" />
 </head>
 
 <body>
-    
+
     </div>
     <div id="aav">
-            <div id="hint_heseg"> level: </div>     
-            <div id="buhel_body">
-                    <div class="sparkle"></div>
-                            <div id="item" >
-                                <img class = "smallD" src="https://firebasestorage.googleapis.com/v0/b/enigma-box.appspot.com/o/pidjak.png?alt=media&token=523184fe-32d8-4692-bf58-c1abc3636161">
-                                </div>   
-                            <div class="coil-container">
-                                <div class="coil coil-1"></div>
-                                <div class="coil coil-2"></div>
-                                <div class="coil coil-3"></div>
-                                <div class="coil coil-4"></div>
-                                <div class="coil coil-5"></div>
-                                <div class="coil coil-6"></div>
-                                <div class="coil coil-7"></div>
-                                <div class="coil coil-8"></div>
-                        </div>
-                    </div>
-        
-                    <div id="question"> Амжилттай таасанд баяр хүргэе!!!
-                    </div>
-                </div>
-        
-            <script src="./js/sparkle.js"></script>
+        <div id="hint_heseg"> level: </div>
+        <div id="buhel_body">
+            <div class="sparkle"></div>
+            <div id="item">
+                <img class="smallD">
+            </div>
+            <div class="coil-container">
+                <div class="coil coil-1"></div>
+                <div class="coil coil-2"></div>
+                <div class="coil coil-3"></div>
+                <div class="coil coil-4"></div>
+                <div class="coil coil-5"></div>
+                <div class="coil coil-6"></div>
+                <div class="coil coil-7"></div>
+                <div class="coil coil-8"></div>
+            </div>
+        </div>
+
+        <div id="question"> Амжилттай таасанд баяр хүргэе!!!
+        </div>
+    </div>
 </body>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
 <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBYXtJKzhgHDJfYfS3WB3LUiCR2baBBuT0",
+        authDomain: "enigma-box.firebaseapp.com",
+        databaseURL: "https://enigma-box.firebaseio.com",
+        projectId: "enigma-box",
+        storageBucket: "enigma-box.appspot.com",
+        messagingSenderId: "1009957713350",
+        appId: "1:1009957713350:web:4a02ab0a2de9d04dfbaec7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
 </script>
+<script src="./js/sparkle.js"></script>
+
 
 </html>

@@ -1,7 +1,7 @@
 function play(){
-    window.location = "/quiz.html";
+    window.location = "./quiz.html";
 }
 
 function skin(){
-    window.location = "/skin.html";
+    window.location = "./skin.html";
 }

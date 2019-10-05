@@ -128,6 +128,11 @@ body{
  }
 
  .erhun {
-    
     position: relative;
+ }
+
+ .erhun img {
+    position: absolute;
+    top: 0;
+    left: 0;
  }

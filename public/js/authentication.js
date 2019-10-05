@@ -68,6 +68,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 // });
 
 function faceLogin() {
+    console.log('asdasdasd')
     firebase.auth().signInWithPopup(provider).then(function (result) {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;
@@ -76,6 +77,7 @@ function faceLogin() {
         console.log(user);
         // ...
     }).catch(function (error) {
+        console.log(error.message)
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
