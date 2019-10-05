@@ -23,6 +23,7 @@ body {
 }
 img {
     height: 30vh;
+    top: 80px;
 }
 .top {
     display: flex;
