@@ -24,15 +24,6 @@ body {
 img {
     height: 30vh;
 }
-.top {
-    height: 50px;
-    background-color: black;
-    color: white;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 #logo {
     height: 94%;
     width: 94%;

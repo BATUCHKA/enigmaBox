@@ -1,3 +1,3 @@
 var play = () => {
-    window.location = "authentication.html";
+    window.location = "gamePlay.html";
 }

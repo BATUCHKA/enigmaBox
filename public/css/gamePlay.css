@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+	width: 100%;
+	height: 100vh;
+  background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-image: url("../src/EBlogo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.play {
+  background-color: #FFDD0E;
+  width: 22vw;
+  height: 7vh;
+  font-size: 20px;
+  font-family: minecraftia;
+  color: aliceblue;
+  outline-color: violet;
+  border-radius: 10px;
+}
+
+.ug-container {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.para1 {
+  color: aliceblue;
+  font-family: minecraftia;
+  font-size: 17px;
+}
+.para2 {
+  margin-top: 7%;
+  color: aliceblue;
+  font-family: minecraftia;
+  font-size: 17px;
+}
+.garchig {
+  padding: 5px;
+  font-family: minecraftia;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.pic1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 25%;
+  background-image: url("../src/oki.jpg");
+}
+.pic2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 25%;
+  background-image: url("../src/maxresdefault.jpg");
+}
