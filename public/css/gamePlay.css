@@ -1,9 +1,10 @@
 body {
   margin: 0;
 	width: 100%;
-	height: 100vh;
+	height: 120vh;
   background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
   background-size: 400% 400%;
+  
   animation: gradientBG 10s ease infinite;
   color: white;
 }
@@ -35,16 +36,25 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
 }
-
-.play {
-  background-color: #FFDD0E;
-  width: 22vw;
-  height: 7vh;
+.playButton {
   font-size: 20px;
   font-family: minecraftia;
   color: aliceblue;
-  outline-color: violet;
+}
+
+.play {
+  background: linear-gradient(45deg, rgb(166, 255, 0),rgb(0, 89, 255));
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;;
+  width: 35vw;
+  height: 9vh;
+  font-size: 20px;
+  font-family: minecraftia;
+  color: aliceblue;
   border-radius: 10px;
+  display: flex;
+  position: relative;
+  top: 10px;
 }
 
 .ug-container {
@@ -59,15 +69,16 @@ body {
   align-content: center;
 }
 .para1 {
+
   color: aliceblue;
   font-family: minecraftia;
-  font-size: 17px;
+  font-size: 20px;
 }
 .para2 {
-  margin-top: 7%;
+  margin-top: 4%;
   color: aliceblue;
   font-family: minecraftia;
-  font-size: 17px;
+  font-size: 20px;
 }
 .garchig {
   padding: 5px;
@@ -83,12 +94,13 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100vw auto;
   background-repeat: no-repeat;
   background-position: top left;
   height: 25%;
   background-image: url("../src/oki.jpg");
+  background-position: center;
+
 }
 .pic2 {
   display: flex;
@@ -97,7 +109,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
-  background-size: cover;
+  background-size: 100vw auto;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: top left;
