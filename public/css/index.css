@@ -19,25 +19,6 @@ body {
 		background-position: 0% 50%;
 	}
 }
-.contain {
-	width: 100%;
-	position: absolute;
-	top: 35%;
-	text-align: center;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 12.3%;
-  width: 100%;
-  color: #fff;
-	background: linear-gradient(-45deg, rgb(0, 0, 0), rgb(71, 7, 90));
-	background-size: 400% 400%;
-	animation: gradientBG 15s ease infinite;
-
-}
-
-
 
 .logo {
   display: flex;
@@ -46,10 +27,9 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
-  background-image: url("../src/nice.jpeg");
+  background-image: url("../src/EBlogo.png");
   background-size: cover;
   background-repeat: no-repeat;
-
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -57,14 +37,13 @@ body {
 }
 
 .play {
-  background-color: rgb(83, 8, 80);
+  background-color: #FFDD0E;
   width: 22vw;
   height: 7vh;
   font-size: 20px;
   font-family: minecraftia;
   color: aliceblue;
   outline-color: violet;
-
 }
 
 .ug-container {
