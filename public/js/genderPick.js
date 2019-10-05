@@ -27,15 +27,3 @@ var maleRef = () => {
         window.location = "/profile.html";
     });
 }
-// function neriinugno(name) {
-
-//     console.log(name);
-// }
-
-// var a = (name) => {
-//     console.log(name);
-    
-// }
-// a(name);
-
-// neriinugno(name);
