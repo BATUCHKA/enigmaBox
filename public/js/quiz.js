@@ -11,6 +11,14 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+var userId;
+// user auth
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        userId = user.uid;
+    }
+});
+
 let life = 2;
 document.getElementById('too').innerHTML = 'X' + life;
 
@@ -32,15 +40,17 @@ let questionIndex = 0;
 
 let questions = [];
 
-refCollection.where('random', '==', rd).limit(10).get()
+refCollection.where('random', '==', rd).limit(20).get()
     .then(snapshot => {
         snapshot.forEach(doc => {
             questions = doc.data().questions;
+            console.log(questions)
             renderQuestion(questions[questionIndex])
         });
     })
 
 function renderQuestion(question) {
+    console.log(question);
     let questionEl = document.getElementById('question');
     questionEl.innerHTML = '';
     
@@ -50,13 +60,14 @@ function renderQuestion(question) {
     let answerEl = document.createElement('h4');
     answerEl.classList.add("goy");  
     answerEl.id = 'asuult'; 
-    answerEl.innerHTML = question.question;
+    answerEl.innerHTML = questions[questionIndex].question;
     questionEl.appendChild(answerEl);
 
-    for (let i = 0; i < question.answers.length; i++) {
+
+    for (let i = 0; i < questions[questionIndex].answer.length; i++) {
         let optionEl = document.createElement('div');
         optionEl.className = 'option';
-        optionEl.innerHTML = question.answers[i].value;
+        optionEl.innerHTML = questions[questionIndex].answer[i].value;
         optionEl.id = i;
         optionEl.onclick = choose;
         optionEl.classList.add("goy");
@@ -66,20 +77,19 @@ function renderQuestion(question) {
 
 function choose() {
     let answerId = this.id;
-    if (questions[questionIndex].answers[answerId].right === true) {
+    if (questions[questionIndex].answer[answerId].right === true) {
         console.log('zov')
         questionIndex++;
         if (questionIndex != questions.length)  {
-            renderQuestion(questions[questionIndex]);
+            renderQuestion(question[questionIndex]);
         } else {
             console.log('question duuslaa')
-            document.location.href = './sparkle.html'
+            document.location.href = 'sparkle.html'
         }
-    } else {
+    } else { 
         console.log('buruu')
         life--;
         console.log(life)
         document.getElementById('too').innerHTML = 'X' + life;
-        
     }
 }

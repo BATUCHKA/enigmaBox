@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Profile</title>
-	<link rel="stylesheet" href="./profile.css">
+	<link rel="stylesheet" href="./css/profile.css">
 
 	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
 
@@ -25,22 +25,28 @@
 </head>
 
 <body>
+	<div class="container">
+		<div class="topBar">
+			<div class="score">level:0</div>
+		</div>
 
 
-	<div class="score">score:</div>
+		<div class="erhun">
+			<img src="./src/erhun.png" alt="hun">
+		</div>
 
-	<table class="playSkin">
-		<tr>
-			<td><button onclick="play" class="play"><img src="box.png" alt="box" class="boximg"></button></td>
-			<td class="alnright"> <button onclick="skin" class="skin"> <img src="./play, next, forward, replay, round.png" alt="dude"></button></td>
-		</tr>
-	</table>
+		<table class="playSkin">
+			<tr>
+				<td><button onclick="play()" class="play"><img src="./src/play, next, forward, replay, round.png "
+							alt="box" class="boximg"></button></td>
+				<td class="alnright"> <button onclick="skin()" class="skin"> <img src="./src/profilebox.png"
+							alt="dude"></button></td>
+			</tr>
+		</table>
 
+	</div>
 
-
-
-
-
+	<script src="./js/profile.js"></script>
 </body>
 
 </html>

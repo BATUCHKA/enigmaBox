@@ -1,39 +1,78 @@
 body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+    background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
+}
 .box {
     height: 200px;
     width: 500px;
-    background-color: rgb(232, 232, 232);
-    border: solid 10px rgb(57, 51, 51);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 100px;
-    box-shadow: 0px 1px 5px;
 }
 
 #female {
-    background-color: aquamarine;
+    border: 1px #ffcc22;
     height: 180px;
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #female:active {
-
+    border: 1px #ff9900;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0px 1px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #male {
-    background-color: aquamarine;
+    border: 1px #ffcc22;
     height: 180px;
     width: 180px;
     border-radius: 50%;
     box-shadow: 0px 1px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#male.active {
-
+#male:active {
+    border: 1px #ff9900;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0px 1px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: 130px;
+}
+#text {
+    font-family: "Exo 2" "ExtraBold";
+    font-size: 40px;
+    color: white;
 }

@@ -1,25 +1,37 @@
 body {
     margin: 0;
-    background-color: rgb(255, 230, 0);
+	width: 100%;
+	height: 100vh;
+    background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
 }
 img {
     height: 30vh;
-}
-.top {
-    top: 0;
-    display: flex;
-    position: fixed;
-    background-color: rgb(0, 202, 192);
-    width: 100%;
-    height: 10%;
-    box-shadow: 0px 1px 3px;
 }
 #logo {
     height: 94%;
     width: 94%;
     top: 5px;
     left: 10px;
+}
+#text {
+    font-family: "Exo 2" "ExtraBold";
+    font-size: 40px;
+    color: white;
 }
