@@ -15,9 +15,7 @@ body {
 
 .buhel_body {
     min-height: 450px;
-    background-color: #ffcc00;\
-
-    
+    background-color: #ffcc00;
 }
 #aav {
     height: 100vh;
@@ -63,7 +61,6 @@ body {
     align-items: center;    
 }
 .goy {
-
     border: solid 5px #ffcc00;
     padding: 10px;
     margin: 12px;

@@ -71,11 +71,20 @@ function renderQuestion(question) {
 
 function pushItem() {
     const itemCollection = db.collection("Users");
-    itemCollection.doc(userId).update({
-        [`items.${item}`] : itemUrl
-    }).then( k => {
-        console.log('amjiltttai nemlee');
+    itemCollection.doc(userId).get().then(val => {
+        let data = val.data();
+        data.items.push({
+            item: item,
+            itemUrl : itemUrl
+        });
+        itemCollection.doc(userId).update(data).then( k => {
+            document.location.href = 'sparkle.html';
+            console.log('amjiltttai nemlee');
+        }).catch(err =>{
+            console.log('from push item', err)
+        })
 
+        
     }).catch(err =>{
         console.log('from push item', err)
     })
@@ -91,20 +100,13 @@ function choose() {
         } else {
             console.log('question duuslaa');
             console.log('userId:', userId)
-            firebase.firestore().collection(`Users/${userId}/items`).add({
-                url: itemUrl
-            }).then(() => {
-                // document.location.href = 'sparkle.html';
-                console.log('DONE')
-            }).catch(e => {
-                console.log(e);
-            })
-            // pushItem();
+            pushItem();
         }
     } else { 
         console.log('buruu')
         life--;
         console.log(life)
         document.getElementById('too').innerHTML = 'X' + life;
+        this.style.borderColor = 'red';
     }
 }
