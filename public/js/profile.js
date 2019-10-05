@@ -23,10 +23,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 function play() {
     window.location = "./quiz.html";
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> bb68627c5afb734419165bbe9dff6d92009daaed
 function skin() {
     window.location = "./skin.html";
 }
