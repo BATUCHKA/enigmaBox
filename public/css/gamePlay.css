@@ -44,6 +44,7 @@ body {
   font-family: minecraftia;
   color: aliceblue;
   outline-color: violet;
+  border-radius: 10px;
 }
 
 .ug-container {
