@@ -31,7 +31,7 @@ img {
     left: 10px;
 }
 #text {
-    font-family: "Exo 2" "ExtraBold";
-    font-size: 40px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 70px;
     color: white;
 }
