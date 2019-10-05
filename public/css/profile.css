@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     width: 100%;
@@ -21,6 +22,19 @@ body {
 * {
     outline: none;
 }
+=======
+* {
+    outline: none;
+}
+
+body{
+    background-color: yellow;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;  
+}
+
+>>>>>>> 64ed46d18085955c6557b83cc985003ac0833f8b
 .container {
     height: 100vh;
     width: 100vw;
@@ -36,6 +50,7 @@ body {
     display: flex;
     justify-content: flex-start;
 }
+
 
 .play{
     height:100px;
@@ -74,7 +89,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 .play:active{   
     background-color: white;
 }
@@ -89,57 +103,54 @@ body {
     font-size: 30px;
     color:gray; 
 }
- .tsamts-heseg{
+
+.man-costume{
 
     position: absolute;
     top: 4px;
     left: -5px;
   
     /* visibility: hidden; */
- }
- .nudniishil-heseg{
+}
+
+.man-glasses{
     position: absolute;
     top: 4px;
     left: 0px;
     /* visibility: hidden; */
- }
- .tsag-heseg{
+}
+
+.man-watch{
     position: absolute;
     top: 4px;
     left: -5px;
-    /* visibility: hidden;  */
- }
- .umd-heseg{
+}
+
+.man-pant{
     top: 4px;
     left: 0px;
     position: absolute;
     top: 50%;
-    /* visibility: hidden; */
+    visibility: hidden;
     left:40.9%;
   
 
- }
- .malgai-heseg{
+}
+.man-hat{
     position: absolute;
     top:-6px;
     left: -2px;
 
-    /* visibility: hidden; */
+    visibility: hidden;
     
 
- }
- .gutal-heseg{
+}
+.man-shoes{
     position: absolute;
     top: 4px;
     left: -5px;
+}
 
-
-    /* visibility: hidden;  */
-  
-
- }
-
- .erhun {
-    
+.erhun {
     position: relative;
- }
+}

@@ -5,42 +5,40 @@ body{
 }
 .level1{
     margin-left: 10%;
-   margin-top: 10%;
-
+    margin-top: 10%;
+    display: flex;
 }
 .level2{
     margin-left: 10%;
-    margin-top: 45%;
- 
- }
- .level3{
+    margin-top: 10%;
+    display: flex;
+}.level3{
     margin-left: 10%;
-    margin-top: 50%;
- 
- }
+    margin-top: 10%;
+    display: flex;
+}
+.ug{
+    margin-left:10%;
+}
 
- .ug{
-     margin-left:10%;
- }
- .diamondb{
-    width: 20vw;
-    height: 20vh;
+.diamondb{
+width: 1vw;
+height: 1vh;
+margin-left: 10vh;
+margin-top: 10%;
+
+
+}
+.goldenb{
+    width: 1vw;
+    height: 1vh;
     margin-left: 40%;
     margin-top: 10%;
- 
-    
- }
- .goldenb{
-    width: 20vw;
-    height: 20vh;
-    margin-left: 40%;
-    margin-top: 10%;
- 
- }
- .silverb{
-    width: 20vw;
-    height: 20vh;
-    margin-left: 40%;
-    margin-top: 10%;
- 
- }
+}
+.silverb{
+width: 1vw; 
+height: 1vh;
+margin-left: 40%;
+margin-top: 10%;
+
+}
