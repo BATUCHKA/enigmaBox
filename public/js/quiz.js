@@ -35,9 +35,9 @@ refCollection.where('random', '==', rd).limit(1).get()
     .then(snapshot => {
         snapshot.forEach(doc => {
             item = doc.id;
-            itemUrl = doc.data().url;
+            itemUrl = doc.data().manUrl;
             questions = doc.data().questions;
-            itemUrl = doc.data().url;
+            itemUrl = doc.data().manUrl;
             console.log(questions)
             renderQuestion(questions[questionIndex])
         });
@@ -48,7 +48,7 @@ function renderQuestion(question) {
     let questionEl = document.getElementById('question');
     questionEl.innerHTML = '';
     
-    document.getElementById('hint_heseg').innerHTML = 'level: ' + lvl;
+    document.getElementById('hint_heseg').innerHTML = 'Асуулт: ' + lvl;
     lvl++;
 
     let answerEl = document.createElement('h4');
@@ -73,6 +73,7 @@ function pushItem() {
     const itemCollection = db.collection("Users");
     itemCollection.doc(userId).get().then(val => {
         let data = val.data();
+        console.log(data);
         data.items.push({
             item: item,
             itemUrl : itemUrl
@@ -106,7 +107,13 @@ function choose() {
         console.log('buruu')
         life--;
         console.log(life)
+        if (life == 0) {
+            window.location = "./profile.html"
+        }
         document.getElementById('too').innerHTML = 'X' + life;
         this.style.borderColor = 'red';
     }
+}
+function butsah() {
+    window.location = "./profile.html"
 }
