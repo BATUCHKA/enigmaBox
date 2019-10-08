@@ -12,3 +12,6 @@ firebase.auth().onAuthStateChanged(function (u) {
         })
     }
 });
+setTimeout(function() {
+    window.location = "./profile.html";
+}, 9000);
