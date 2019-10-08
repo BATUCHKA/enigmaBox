@@ -76,11 +76,23 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 25px;
 }
-.para2 {
+.para0 {
   margin-top: 4%;
   color: aliceblue;
   font-family: 'Exo 2', sans-serif;
 
+  font-size: 25px;
+}
+.para2 {
+
+  color: aliceblue;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 25px;
+}
+.para15{
+
+  color: aliceblue;
+  font-family: 'Exo 2', sans-serif;
   font-size: 25px;
 }
 .garchig {
@@ -89,6 +101,21 @@ body {
   font-size: 35px;
   color: aliceblue;
   text-align: center;
+}
+.pic0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-size: 65vw auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 60%;
+  background-image: url("../src/oke.png");
+  background-position: center;
+
 }
 .pic1 {
   display: flex;
@@ -102,6 +129,21 @@ body {
   background-position: top left;
   height: 60%;
   background-image: url("../src/okii.png");
+  background-position: center;
+
+}
+.pic15 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-size: 65vw auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 60%;
+  background-image: url("../src/doki.png");
   background-position: center;
 
 }
