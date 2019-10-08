@@ -8,6 +8,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/skin.css">
     <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBYXtJKzhgHDJfYfS3WB3LUiCR2baBBuT0",
+            authDomain: "enigma-box.firebaseapp.com",
+            databaseURL: "https://enigma-box.firebaseio.com",
+            projectId: "enigma-box",
+            storageBucket: "enigma-box.appspot.com",
+            messagingSenderId: "1009957713350",
+            appId: "1:1009957713350:web:4a02ab0a2de9d04dfbaec7"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 
 <body>
