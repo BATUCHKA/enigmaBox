@@ -3,7 +3,7 @@ body {
 	width: 100%;
 	height: 120vh;
   background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
-  background-size: 600% 600%;
+  background-size: 550% 550%;
   
   animation: gradientBG 10s ease infinite;
   color: white;
@@ -56,7 +56,7 @@ body {
   border-radius: 10px;
   display: flex;
   position: relative;
-  top: 10px;
+  bottom: 13px;
 }
 
 .ug-container {
