@@ -1,3 +1,3 @@
 function jump() {
-    window.location = "./profile.html"
+    window.location.href = `../profile.html`
 }

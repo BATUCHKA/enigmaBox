@@ -67,6 +67,8 @@ function renderQuestion(question) {
         optionEl.classList.add("goy");
         questionEl.appendChild(optionEl);
     }
+
+    questionEl.style.display = "block";
 }
 
 function pushItem() {
