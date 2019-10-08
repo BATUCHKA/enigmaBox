@@ -47,8 +47,8 @@ body {
   background: linear-gradient(45deg, rgb(166, 255, 0),rgb(0, 89, 255));
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;;
-  width: 35vw;
-  height: 9vh;
+  width: 40vw;
+  height: 11vh;
   font-size: 20px;
   font-family: 'Exo 2', sans-serif;
 
@@ -76,19 +76,46 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 25px;
 }
-.para2 {
+.para0 {
   margin-top: 4%;
   color: aliceblue;
   font-family: 'Exo 2', sans-serif;
 
   font-size: 25px;
 }
+.para2 {
+
+  color: aliceblue;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 25px;
+}
+.para15{
+
+  color: aliceblue;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 25px;
+}
 .garchig {
   padding: 5px;
   font-family: 'Exo 2', sans-serif;
   font-size: 35px;
-  color: white;
+  color: aliceblue;
   text-align: center;
+}
+.pic0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-size: 65vw auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 60%;
+  background-image: url("../src/oke.png");
+  background-position: center;
+
 }
 .pic1 {
   display: flex;
@@ -97,11 +124,26 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
-  background-size: 100vw auto;
+  background-size: 65vw auto;
   background-repeat: no-repeat;
   background-position: top left;
-  height: 25%;
-  background-image: url("../src/oki.jpg");
+  height: 60%;
+  background-image: url("../src/okii.png");
+  background-position: center;
+
+}
+.pic15 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  background-size: 65vw auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 60%;
+  background-image: url("../src/doki.png");
   background-position: center;
 
 }
@@ -112,10 +154,10 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
-  background-size: 100vw auto;
-  background-repeat: no-repeat;
+  background-size: 65vw auto;
   background-repeat: no-repeat;
   background-position: top left;
-  height: 25%;
-  background-image: url("../src/maxresdefault.jpg");
+  height: 60%;
+  background-position: center;
+  background-image: url("../src/con.png");
 }
