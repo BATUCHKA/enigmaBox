@@ -20,9 +20,11 @@ function getRandomInt(max) {
 
 //var rd = getRandomInt(2) + 1;
 
-let rd = 1;
 
-console.log(rd);
+
+// let rd = 1;
+
+// console.log(rd);
 
 let questionIndex = 0;
 
@@ -31,29 +33,60 @@ let item = "";
 
 let itemUrl = '';
 
-refCollection.where('random', '==', rd).limit(1).get()
-    .then(snapshot => {
-        snapshot.forEach(doc => {
-            item = doc.id;
-            itemUrl = doc.data().manUrl;
-            questions = doc.data().questions;
-            itemUrl = doc.data().manUrl;
-            console.log(questions)
-            renderQuestion(questions[questionIndex])
-        });
-    })
+// refCollection.where('random', '==', rd).limit(1).get()
+//     .then(snapshot => {
+//         snapshot.forEach(doc => {
+//             item = doc.id;
+//             itemUrl = doc.data().manUrl;
+//             questions = doc.data().questions;
+//             itemUrl = doc.data().manUrl;
+//             console.log(questions)
+//             renderQuestion(questions[questionIndex])
+//         });
+//     })
+
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+
+    return a;
+}
+let sh = [1, 2, 3, 4, 5, 6, 7];
+let randomtoo = shuffle(sh);
+
+console.log(randomtoo);
+
+randomtoo.forEach((elemnt) => {
+
+    console.log(elemnt);
+    refCollection.where('random', '==', elemnt).get()
+        .then(snapshot => {
+            snapshot.forEach(doc => {
+                console.log(doc.data())
+                item = doc.id;
+                itemUrl = doc.data().manUrl;
+                questions = doc.data().questions;
+                itemUrl = doc.data().manUrl;
+                console.log(questions)
+                renderQuestion(questions[questionIndex])
+            });
+        })
+})
+
 
 function renderQuestion(question) {
     console.log(question);
     let questionEl = document.getElementById('question');
     questionEl.innerHTML = '';
-    
+
     document.getElementById('hint_heseg').innerHTML = 'Асуулт: ' + lvl;
     lvl++;
 
     let answerEl = document.createElement('h4');
-    answerEl.classList.add("goy");  
-    answerEl.id = 'asuult'; 
+    answerEl.classList.add("goy");
+    answerEl.id = 'asuult';
     answerEl.innerHTML = questions[questionIndex].question;
     questionEl.appendChild(answerEl);
 
@@ -78,17 +111,17 @@ function pushItem() {
         console.log(data);
         data.items.push({
             item: item,
-            itemUrl : itemUrl
+            itemUrl: itemUrl
         });
-        itemCollection.doc(userId).update(data).then( k => {
+        itemCollection.doc(userId).update(data).then(k => {
             document.location.href = 'sparkle.html';
             console.log('amjiltttai nemlee');
-        }).catch(err =>{
+        }).catch(err => {
             console.log('from push item', err)
         })
 
-        
-    }).catch(err =>{
+
+    }).catch(err => {
         console.log('from push item', err)
     })
 }
@@ -98,14 +131,14 @@ function choose() {
     if (questionIndex < questions.length && questions[questionIndex].answer[answerId].right === true) {
         console.log('zov')
         questionIndex++;
-        if (questionIndex != questions.length)  {
+        if (questionIndex != questions.length) {
             renderQuestion(question[questionIndex - 1]);
         } else {
             console.log('question duuslaa');
             console.log('userId:', userId)
             pushItem();
         }
-    } else { 
+    } else {
         console.log('buruu')
         life--;
         console.log(life)
