@@ -38,6 +38,10 @@ body {
     background: linear-gradient(45deg, #FFDD0E, #FFDD0E, #5AE7FF, #5AE7FF);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     @keyframes gradientBG {
             0% {
