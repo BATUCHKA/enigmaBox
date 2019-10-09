@@ -1,3 +1,54 @@
+var userId;
+// user auth
+document.getElementById("ami").style.display = "none";
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        userId = user.uid;
+
+        db.doc('Users/' + userId).get()
+            .then(function (doc) {
+                const lvl = doc.data().level;
+                let papa = document.createElement("div");
+                papa.className = "box"
+                let box = document.createElement("img");
+                box.alt = "Дотор нь юу байгаа вэ";
+                papa.appendChild(box);
+                let aav =  document.getElementsByClassName("buhel_body")[0];
+
+                if (lvl > 0 && lvl < 2) {
+                    box.src = "https://firebasestorage.googleapis.com/v0/b/enigma-box.appspot.com/o/box-skin.png?alt=media&token=e9145f77-89a6-46eb-a553-0bf5f494e310";
+                }
+              
+                    if (lvl >= 2 && lvl < 4) {
+                        box.src = "../src/silverb.png";
+                    }
+                if (lvl >= 4 && lvl < 6) {
+                    box.src = "../src/goldenb.png";
+                }
+                if (lvl == 6) {
+                    box.src = "../src/dimondb.png";
+                }
+                aav.appendChild(papa);
+
+                document.getElementsByClassName("buhel_body")[0].style.display = "block"
+                document.getElementById("ami").style.display = "flex";
+                document.getElementById("loader").style.display = "none";
+            })
+    }
+});
+
+let life = 2;
+document.getElementById('too').innerHTML = 'X' + life;
+
+let lvl = 1;
+let db = firebase.firestore();
+var refCollection = db.collection("Question");
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+//var rd = getRandomInt(2) + 1;
 
 // user auth
 
