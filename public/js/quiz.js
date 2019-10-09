@@ -12,12 +12,13 @@ async function main() {
                 userId = user.uid;
                 db.collection("Users").doc(userId).get().then((doc) => {
                     if (doc.exists) {
-                        doc.data().items.forEach((el => {
+                        console.log('AJSDNASJDNJNASNDASNDJ')
+                        doc.data().items.forEach(el => {
                             items.push(el);
-                        }))
+                        })
                     }
+                    resolve();
                 })
-                resolve();
             }
         });
     })
@@ -25,7 +26,7 @@ async function main() {
     await inpromise;
     console.log(1);
     let life = 2;
-    console.log(items[1]);
+    console.log(items);
 
     document.getElementById('too').innerHTML = 'X' + life;
 
@@ -127,15 +128,19 @@ async function main() {
             life--;
             console.log(life)
             if (life == 0) {
+                function butsah() {
                 window.location = "./profile.html"
+                }   
             }
             document.getElementById('too').innerHTML = 'X' + life;
             this.style.borderColor = 'red';
         }
     }
-    function butsah() {
-        window.location = "./profile.html"
-    }
+
+}
+
+function butsah() {
+    window.location = "./profile.html"
 }
 main();
 
