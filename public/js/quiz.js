@@ -57,6 +57,7 @@ async function main() {
     var refCollection = db.collection("Question");
     var userId;
     let items = [];
+    
     let inpromise = new Promise((resolve) => {
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
