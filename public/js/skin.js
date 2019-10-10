@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                     let lvl2BoxEl = document.getElementsByClassName('silverb')[0].src = '../src/silverb.png';
                     let lvl4BoxEl = document.getElementsByClassName('goldenb')[0].src = '../src/goldenb.png';
                 }
-                if (lvl == 6) {
+                if (lvl >= 6) {
                     let lvl2BoxEl = document.getElementsByClassName('silverb')[0].src = '../src/silverb.png';
                     let lvl4BoxEl = document.getElementsByClassName('goldenb')[0].src = '../src/goldenb.png';
                     let lvl6BoxEl = document.getElementsByClassName('diamondb')[0].src = '../src/dimondb.png';

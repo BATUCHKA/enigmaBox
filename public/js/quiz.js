@@ -63,7 +63,6 @@ async function main() {
                 userId = user.uid;
                 db.collection("Users").doc(userId).get().then((doc) => {
                     if (doc.exists) {
-                        console.log('AJSDNASJDNJNASNDASNDJ');
                         lvl = doc.data().items.length + 1;
                         doc.data().items.forEach(el => {
                             items.push(el);
@@ -72,7 +71,6 @@ async function main() {
                     resolve();
                 })
             }
-            
         });
     })
 
@@ -91,20 +89,21 @@ async function main() {
     let questions = [];
     let item = "";
 
-    let itemUrl = '';
-
-    console.log(lvl);
+    let itemUrlMan = '', itemUrlWoman = '';
 
     refCollection.where('random', '==', lvl).get()
         .then(snapshot => {
             console.log("snapshot = ",snapshot);
+
             snapshot.forEach(doc => {
-                // console.log("SHOW THIS TWICE PLS!");    
+
+                console.log("SHOW THIS TWICE PLS!");    
                 console.log(lvl);
                 item = doc.id;
-                itemUrl = doc.data().manUrl;
+                itemUrlMan = doc.data().manUrl;
+                itemUrlWoman = doc.data().womanUrl;
                 questions = doc.data().questions;
-                itemUrl = doc.data().manUrl;
+
                 console.log(questions);
                 renderQuestion(questions[questionIndex])
             })
@@ -143,10 +142,15 @@ async function main() {
         itemCollection.doc(userId).get().then(val => {
             let data = val.data();
             console.log(data);
-            data.items.push({
-                item: item,
-                itemUrl: itemUrl
-            });
+
+            let pItem = {
+                "item" : item,
+                "itemUrl" : itemUrlMan
+            }
+            if(val.data().gender == "female") pItem.itemUrl = itemUrlWoman;
+
+            data.items.push(pItem)
+
             itemCollection.doc(userId).update(data).then(k => {
                 document.location.href = 'sparkle.html';
                 console.log('amjiltttai nemlee');
@@ -162,7 +166,7 @@ async function main() {
 
     function choose() {
         let answerId = this.id;
-
+        console.log(question[questionIndex]);
         console.log(questions[questionIndex].answer[answerId]);
         if (questionIndex < questions.length && questions[questionIndex].answer[answerId].right === true) {
             console.log('zov')
@@ -194,4 +198,3 @@ function butsah() {
 }
 
 main();
-
