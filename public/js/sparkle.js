@@ -15,3 +15,17 @@ firebase.auth().onAuthStateChanged(function (u) {
 setTimeout(function() {
     window.location = "./profile.html";
 }, 9000);
+const db = firebase.firestore();
+let userId;
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        userId = user.uid;
+
+        db.doc('Users/' + userId).get()
+            .then(function(doc) {
+                const lvl= doc.data().items.length;
+                lvl++;
+            })
+    }
+});

@@ -3,12 +3,14 @@ let userId;
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        console.log(user);
         userId = user.uid;
 
         db.doc('Users/' + userId).get()
             .then(function(doc) {
-                const lvl= doc.data().level;
+                const lvl= doc.data().items.length;
+
+                console.log(lvl);
+                document.getElementById('header').innerHTML = 'level: ' + lvl;
 
                 if (lvl >= 2 && lvl < 4) {
                     let lvl2BoxEl = document.getElementsByClassName('silverb')[0].src = '../src/silverb.png';
@@ -25,7 +27,6 @@ firebase.auth().onAuthStateChanged(function (user) {
             })
     }
 });
-
 
 function jump() {
     window.location.href = `../profile.html`
