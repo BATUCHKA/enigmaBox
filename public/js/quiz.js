@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         db.doc('Users/' + userId).get()
             .then(function (doc) {
-                const lvl = doc.data().level;
+                const lvl = doc.data().items.length;
                 let papa = document.createElement("div");
                 papa.className = "box"
                 let box = document.createElement("img");
@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                 papa.appendChild(box);
                 let aav =  document.getElementsByClassName("buhel_body")[0];
 
-                if (lvl > 0 && lvl < 2) {
+                if (lvl >= 0 && lvl < 2) {
                     box.src = "https://firebasestorage.googleapis.com/v0/b/enigma-box.appspot.com/o/box-skin.png?alt=media&token=e9145f77-89a6-46eb-a553-0bf5f494e310";
                 }
               
@@ -40,7 +40,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 let life = 2;
 document.getElementById('too').innerHTML = 'X' + life;
 
-let lvl = 1;
 let db = firebase.firestore();
 var refCollection = db.collection("Question");
 
@@ -53,6 +52,7 @@ function getRandomInt(max) {
 // user auth
 
 async function main() {
+    let lvl;
     let db = firebase.firestore();
     var refCollection = db.collection("Question");
     var userId;
@@ -63,7 +63,8 @@ async function main() {
                 userId = user.uid;
                 db.collection("Users").doc(userId).get().then((doc) => {
                     if (doc.exists) {
-                        console.log('AJSDNASJDNJNASNDASNDJ')
+                        console.log('AJSDNASJDNJNASNDASNDJ');
+                        lvl = doc.data().items.length + 1;
                         doc.data().items.forEach(el => {
                             items.push(el);
                         })
@@ -71,22 +72,19 @@ async function main() {
                     resolve();
                 })
             }
+            
         });
     })
 
     await inpromise;
-    console.log(1);
     let life = 2;
     console.log(items);
 
     document.getElementById('too').innerHTML = 'X' + life;
 
-    let lvl = 1;
-
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
-
 
     let questionIndex = 0;
 
@@ -95,22 +93,23 @@ async function main() {
 
     let itemUrl = '';
 
+    console.log(lvl);
 
-    let rd = 1;
-
-    refCollection.where('random', '==', rd).get()
+    refCollection.where('random', '==', lvl).get()
         .then(snapshot => {
+            console.log("snapshot = ",snapshot);
             snapshot.forEach(doc => {
-                console.log(doc.data())
+                // console.log("SHOW THIS TWICE PLS!");    
+                console.log(lvl);
                 item = doc.id;
                 itemUrl = doc.data().manUrl;
                 questions = doc.data().questions;
                 itemUrl = doc.data().manUrl;
-                console.log(questions)
+                console.log(questions);
                 renderQuestion(questions[questionIndex])
             })
         });
-
+    
     function renderQuestion(question) {
         console.log(question);
         let questionEl = document.getElementById('question');
@@ -163,25 +162,25 @@ async function main() {
 
     function choose() {
         let answerId = this.id;
+
+        console.log(questions[questionIndex].answer[answerId]);
         if (questionIndex < questions.length && questions[questionIndex].answer[answerId].right === true) {
             console.log('zov')
             questionIndex++;
             if (questionIndex != questions.length) {
                 renderQuestion(question[questionIndex - 1]);
             } else {
-                rd++;
                 console.log('question duuslaa');
                 console.log('userId:', userId)
                 pushItem();
+                lvl++;
             }
         } else {
             console.log('buruu')
             life--;
             console.log(life)
             if (life == 0) {
-                function butsah() {
-                window.location = "./profile.html"
-                }   
+                butsah();
             }
             document.getElementById('too').innerHTML = 'X' + life;
             this.style.borderColor = 'red';
@@ -193,5 +192,6 @@ async function main() {
 function butsah() {
     window.location = "./profile.html"
 }
+
 main();
 

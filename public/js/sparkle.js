@@ -24,8 +24,8 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         db.doc('Users/' + userId).get()
             .then(function(doc) {
-                const lvl= doc.data().level;
-                lvl = lvl + 1;
+                const lvl= doc.data().items.length;
+                lvl++;
             })
     }
 });
