@@ -1,12 +1,15 @@
 <html>
 
 <head>
-        <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500&display=swap&subset=cyrillic-ext"
+        rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
     <script src="./js/index.js"></script>
     <script>
         const firebaseConfig = {
@@ -19,6 +22,15 @@
             appId: "1:1009957713350:web:4a02ab0a2de9d04dfbaec7"
         };
         firebase.initializeApp(firebaseConfig);
+
+        // Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                });
+        }
+
     </script>
 </head>
 
