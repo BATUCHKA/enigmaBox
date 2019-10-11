@@ -153,13 +153,11 @@ async function main() {
             data.items.push(pItem)
 
             itemCollection.doc(userId).update(data).then(k => {
-                document.location.href = 'sparkle.html';
+                window.location.href = '../sparkle.html';
                 console.log('amjiltttai nemlee');
             }).catch(err => {
                 console.log('from push item', err)
             })
-
-
         }).catch(err => {
             console.log('from push item', err)
         })
@@ -167,7 +165,8 @@ async function main() {
 
     function choose() {
         let answerId = this.id;
-        console.log(question[questionIndex]);
+        console.log(questions);
+        console.log(questions[questionIndex]);
         console.log(questions[questionIndex].answer[answerId]);
         if (questionIndex < questions.length && questions[questionIndex].answer[answerId].right === true) {
             console.log('zov')
@@ -195,7 +194,7 @@ async function main() {
 }
 
 function butsah() {
-    window.location = "./profile.html"
+    window.location.href = "../profile.html"
 }
 
 main();

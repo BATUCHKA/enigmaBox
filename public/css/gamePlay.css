@@ -36,27 +36,40 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
 }
+
+button {
+  display: flex;
+  align-items: center;
+}
+
+.playContainer {
+  width: 100vw;
+  height: 11vh;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+
 .playButton {
   font-size: 30px;
   font-family: 'Exo 2', sans-serif;
-
-  color: aliceblue;
+  text-align: center;
 }
 
 .play {
-  background: linear-gradient(45deg, rgb(166, 255, 0),rgb(0, 89, 255));
+  /* background: linear-gradient(45deg, rgb(166, 255, 0),rgb(0, 89, 255)); */
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;;
   width: 40vw;
   height: 11vh;
   font-size: 20px;
   font-family: 'Exo 2', sans-serif;
-
-  color: aliceblue;
-  border-radius: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
   position: relative;
-  bottom: 13px;
+  bottom: 0%;
 }
 
 .ug-container {
@@ -80,7 +93,6 @@ body {
   margin-top: 4%;
   color: aliceblue;
   font-family: 'Exo 2', sans-serif;
-
   font-size: 25px;
 }
 .para2 {
@@ -113,7 +125,7 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   height: 60%;
-  background-image: url("../src/oke.png");
+  background-image: url("../src/profile.png");
   background-position: center;
 
 }
@@ -128,7 +140,7 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   height: 60%;
-  background-image: url("../src/okii.png");
+  background-image: url("../src/quiz.png");
   background-position: center;
 
 }
@@ -143,7 +155,7 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   height: 60%;
-  background-image: url("../src/doki.png");
+  background-image: url("../src/skin.png");
   background-position: center;
 
 }
